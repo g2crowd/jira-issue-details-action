@@ -1,0 +1,4 @@
+name: Fetch Labels
+outputs:
+  ticket: # id of the output
+    description: "The sum of the inputs"
