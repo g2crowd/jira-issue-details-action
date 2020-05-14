@@ -4,14 +4,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Jira Ticket ID
-        id: split
-        uses: jungwinter/split@v1
-        with:
-          msg: ${{ github.event.commits[0]['message'] }}
-      - name: Download Jira Ticket
-        id: curl
-        if: steps.split.outputs._0 != 'NOJIRA'
-        run: |
-          echo '::set-output name=labels::$(curl -s -u "${{secrets.atlassianUsername}}:7ZhAtK0oTUTFcrkNOqwn7E76" https://g2crowd.atlassian.net/rest/api/2/issue/${{steps.split.outputs._0}} | jq -c .fields.labels)'
-      - name: Check Jira Ticket
-        run: echo ${{steps.curl.outputs.labels}}
+        run: echo HelloWorld
