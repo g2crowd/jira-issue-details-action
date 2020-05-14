@@ -1,7 +1,0 @@
-name: Jira Approval
-jobs:
-  check-jira-ticket:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get Jira Ticket ID
-        run: echo HelloWorld
