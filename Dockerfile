@@ -1,4 +1,4 @@
-FROM everpeace:curl-jq
+FROM everpeace/curl-jq
 
 COPY entrypoint.sh /entrypoint.sh
 
